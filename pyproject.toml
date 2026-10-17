@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phishing_predictions"
+version = "0.1.0"
+description = "A machine learning pipeline that predicts URL phishing"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Hugh Knoepp", email = "hughknoepp@gmail.com" }
+]
+license = { text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Computer Science :: Machine Learning",
+]
+
+# Core production dependencies required to run the pipelines
+dependencies = [
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "scikit-learn>=1.4.0",
+    "pyyaml>=6.0.1",
+    "python-dotenv>=1.0.1",
+    "pathlib>=1.0.1",
+    "matplotlib>=3.11.2",
+    "seaborn>=0.13.2"
+]
+
+# Optional dependencies for local development, testing, and exploration
+dev = [
+    "pytest>=8.0.0",
+    "black>=24.0.0",
+    "ruff>=0.3.0",
+    "jupyterlab>=4.1.0"
+]
+
+# Configures code formatters to enforce a consistent style
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "I"] # Enforces standard style errors, logical errors, and sorted imports

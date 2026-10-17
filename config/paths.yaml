@@ -1,0 +1,5 @@
+# Central registry of pipeline data paths, relative to the project root.
+raw_data: data/raw/PhiUSIIL_Phishing_URL_Dataset.csv
+interim_data: data/interim/cleaned_data.csv
+processed_dir: data/processed/
+models_dir: models/

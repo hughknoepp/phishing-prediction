@@ -1,0 +1,38 @@
+# 1. Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# 2. Local environment secrets (API keys, cloud tokens, database passwords, etc.)
+.env
+.env.*
+
+# 3. Heavy machine learning data and artifacts
+data/external/*
+data/interim/*
+data/processed/*
+data/raw/*
+
+# Prevent Git from ignoring the structure folders and pipeline scripts themselves
+!data/**/.gitkeep
+!data/**/*.py
+
+# 4. Model binary registry (weights, pipelines)
+models/*.pkl
+models/*.pt
+models/*.onnx
+models/*.h5
+!models/**/.gitkeep
+
+# 5. OS and python system caches
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# 6. Interactive notebook sandbox backups
+.ipynb_checkpoints/
+
+# 7. Stale setuptools build metadata
+*.egg-info/

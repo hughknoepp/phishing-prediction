@@ -1,0 +1,14 @@
+# Target column and raw columns to discard before feature engineering.
+target_column: label
+drop_columns:
+  - FILENAME
+  - URL
+  - Title
+  - Domain
+
+# train/test/val split. val_size is the fraction of the train+val split
+# that becomes validation (0.1111 of 90% ~= 10% of the full dataset).
+split:
+  test_size: 0.1
+  val_size: 0.1111
+  random_state: 42
