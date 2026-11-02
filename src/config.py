@@ -23,5 +23,5 @@ def load_data_config() -> dict:
 
 
 def load_model_config(name: str) -> dict:
-    """Return the model class name and hyperparameters for config/models/<name>.yaml."""
-    return _load_yaml(f"models/{name}.yaml")
+    """Return the model class name and hyperparameters for config/<name>.yaml."""
+    return _load_yaml(f"{name}.yaml")

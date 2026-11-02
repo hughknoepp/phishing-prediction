@@ -1,10 +1,18 @@
 # Target column and raw columns to discard before feature engineering.
 target_column: label
+# label values: 1 = legitimate URL, 0 = phishing URL (per the PhiUSIIL dataset).
+# positive_class is the class precision/recall/F1 are scored against; this
+# project's goal is detecting phishing, so that's class 0, not sklearn's
+# default of 1.
+positive_class: 0
 drop_columns:
   - FILENAME
   - URL
   - Title
   - Domain
+  # TLD is a raw string (e.g. "com", "net"); it isn't numeric and breaks
+  # model.fit(). TLDLength and TLDLegitimateProb already encode it numerically.
+  - TLD
 
 # train/test/val split. val_size is the fraction of the train+val split
 # that becomes validation (0.1111 of 90% ~= 10% of the full dataset).

@@ -1,0 +1,27 @@
+model: logistic_regression
+trained_at: '2026-11-02T05:16:49+00:00'
+positive_class: 0
+params:
+  max_iter: 1000
+  class_weight: balanced
+  random_state: 42
+val:
+  accuracy: 0.9996607006531513
+  precision: 0.9995047543581617
+  recall: 0.9997027937388547
+  f1: 0.9996037642397226
+  confusion_matrix:
+    true_positive: 10091
+    false_positive: 5
+    true_negative: 13479
+    false_negative: 3
+test:
+  accuracy: 0.9997031382527566
+  precision: 0.9995048524460289
+  recall: 0.9998018821198613
+  f1: 0.9996533452186401
+  confusion_matrix:
+    true_positive: 10093
+    false_positive: 5
+    true_negative: 13480
+    false_negative: 2
