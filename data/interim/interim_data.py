@@ -55,6 +55,14 @@ def clean_raw_data(raw_data_path: Path, interim_path: Path, drop_columns: list[s
     # Now that Domain-derived features are computed, drop the raw columns.
     cleaned_data = cleaned_data.drop(columns=drop_columns, errors='ignore')
 
+    # Drop duplicate feature vectors (different raw URLs/domains can reduce to
+    # identical engineered features). Without this, the same record can end
+    # up in both the train and test splits downstream, letting the model
+    # partly memorize instead of generalize.
+    n_before = len(cleaned_data)
+    cleaned_data = cleaned_data.drop_duplicates()
+    print(f"Dropped {n_before - len(cleaned_data)} duplicate rows ({len(cleaned_data)} remain).")
+
     # Save the cleaned data to the interim path
     interim_path.parent.mkdir(parents=True, exist_ok=True) # Ensure the directory exists
     cleaned_data.to_csv(interim_path, index=False)

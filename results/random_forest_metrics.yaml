@@ -1,5 +1,5 @@
 model: random_forest
-trained_at: '2026-11-02T05:16:51+00:00'
+trained_at: '2026-11-04T04:57:57+00:00'
 positive_class: 0
 params:
   n_estimators: 200
@@ -13,7 +13,7 @@ val:
   recall: 1.0
   f1: 1.0
   confusion_matrix:
-    true_positive: 10094
+    true_positive: 10013
     false_positive: 0
     true_negative: 13484
     false_negative: 0
@@ -23,7 +23,7 @@ test:
   recall: 1.0
   f1: 1.0
   confusion_matrix:
-    true_positive: 10095
+    true_positive: 10014
     false_positive: 0
     true_negative: 13485
     false_negative: 0

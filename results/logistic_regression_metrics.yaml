@@ -1,27 +1,27 @@
 model: logistic_regression
-trained_at: '2026-11-02T05:16:49+00:00'
+trained_at: '2026-11-04T04:57:54+00:00'
 positive_class: 0
 params:
   max_iter: 1000
   class_weight: balanced
   random_state: 42
 val:
-  accuracy: 0.9996607006531513
-  precision: 0.9995047543581617
-  recall: 0.9997027937388547
-  f1: 0.9996037642397226
+  accuracy: 0.9997020896284632
+  precision: 0.9998001998001999
+  recall: 0.999500649156097
+  f1: 0.9996504020376566
   confusion_matrix:
-    true_positive: 10091
-    false_positive: 5
-    true_negative: 13479
-    false_negative: 3
+    true_positive: 10008
+    false_positive: 2
+    true_negative: 13482
+    false_negative: 5
 test:
-  accuracy: 0.9997031382527566
-  precision: 0.9995048524460289
-  recall: 0.9998018821198613
-  f1: 0.9996533452186401
+  accuracy: 0.9996595599812758
+  precision: 0.9995007987220448
+  recall: 0.9997004194128221
+  f1: 0.999600599101348
   confusion_matrix:
-    true_positive: 10093
+    true_positive: 10011
     false_positive: 5
     true_negative: 13480
-    false_negative: 2
+    false_negative: 3
